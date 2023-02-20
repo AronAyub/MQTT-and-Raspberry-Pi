@@ -85,3 +85,12 @@ GPIO.setup(13, GPIO.OUT)
 ```
 Under [Pato-MQTT-lIBRARY](https://pypi.org/project/paho-mqtt/#usage-and-api) there is a sample code for subribing the client to the broker. We shall manipulate it and use it for the course.
 
+##### Call back when the client receives CONNACK response from server
+```
+def on_connect(client, userdata, flags, rc):
+    print("Connected with result code "+str(rc))
+    # Subscribing in on_connect() means that if we lose the connection and
+    # reconnect then subscriptions will be renewed.
+    client.subscribe("x/y/z") #"x/y/z" replace this with your topic name of your choice in the given order.
+```
+
