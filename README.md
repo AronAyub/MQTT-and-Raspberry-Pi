@@ -14,7 +14,7 @@ Overall, MQTT is a simple, efficient, and flexible messaging protocol that is wi
 
 **Publisher:** A device or application that sends messages to the broker is called a publisher.
 
-Subscriber: A device or application that receives messages from the broker is called a subscriber.
+**Subscriber/Client:** A device or application that receives messages from the broker.
 
 Topic: Messages in MQTT are organized into topics, which are hierarchical strings used to identify the subject of a message. Topics are used to route messages to the appropriate subscribers.
 
