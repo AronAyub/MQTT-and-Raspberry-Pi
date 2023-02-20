@@ -49,27 +49,30 @@ Theoritically, we are subscribing to the defined topic, Aron_Testing_Topic, **-t
 
 The terminal constantly listens to the message, we need to open two terminals. I am using PUTTY to open two terminals.
 ```
-mosquitto_pub -t "test_topic" -m "Hello, Hell is ?"
+mosquitto_pub -t "Aron_Testing_Topic" -m "Hello, Hell is ?"
 ```
 Just like before, **-t** denoting topic, **-m** denotes publish. Our message should appear at the subscriber window as below:
 
+<img width="905" alt="Test client broker" src="https://user-images.githubusercontent.com/55284959/220152803-d4f625c8-f3dc-493b-a027-f13ef4e61442.png">
+
 ## Automation using MQTT & Raspberry Pi
 
-- Ever thought about automating your room ?Controlling your lights, Gate, fridges, gate, remotely ? It can be very interesting since it promotes efficiency, productivity, and accuracy while reducing coss, erros and waste.
+Ever thought about automating your room ?Controlling your lights, Gate, fridges, and any other house appliaces remotely ? It can be very interesting since it promotes efficiency, productivity, and accuracy while reducing cost, erros and waste.
 
-Will explain how to do a simple automation, controlling your devices over the **Mobile App** your **PC** and remotely.
+Will explain how to do a simple automation, controlling your devices over the **Mobile App** your **PC**, all this is done remotely.
 
 ### Raspberry Pi Set up:
-To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) in your terminal type:
+To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) by typing the comand below in the terminal:
 ```
 sudo pip install paho-mqtt
 ```
 
-We are using Mosquitto as our broker and Raspberry pi as our Client device. *Pato-MQTT* will be instrumental in the python script running on Raspberry Pi.
+We are using Mosquitto as our broker and Raspberry pi as our Client device. *Pato-MQTT* library will be instrumental.
 
 #### Code Explained:
-##### Import dependent libraries, paho.mqtt client and GPIOs
 
+Create a .py file in your raspberry pi and let start coding 
+##### Import dependent libraries, paho.mqtt client and GPIOs
 ```
 import paho.mqtt.client as mqtt
 import RPi.GPIO as GPIO
