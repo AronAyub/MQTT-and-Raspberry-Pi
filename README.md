@@ -29,3 +29,10 @@ Overall, MQTT is a simple, efficient, and flexible messaging protocol that is wi
 ### Preliquisites 
 1. Raspberry pi -  make sure your pi is installed with rasbian  [Pi official documentations](https://www.raspberrypi.com/documentation/)
 2. LEDs and Resistors.
+
+#### Broker setup.
+- We are using Mosquitto Broker, open your Raspberry pi terminal and istall it:
+
+```
+sudo apt-get install mosquitto -y
+```
