@@ -93,4 +93,19 @@ def on_connect(client, userdata, flags, rc):
     # reconnect then subscriptions will be renewed.
     client.subscribe("x/y/z") #"x/y/z" replace this with your topic name of your choice in the given order.
 ```
-
+##### The callback for when a PUBLISH message is received from the server
+```
+#You can define as many GPIO as you wish to control your switches.
+def on_message(client, userdata, msg):
+    BarrierBlocked = False
+    print(msg.topic+" "+str(msg.payload))
+    if "green_on" in msg.payload:
+        GPIO.output(11, True)
+    elif "green_off" in msg.payload:
+          GPIO.output(11, False)
+    if "yellow_on" in msg.payload:
+        #print("  Yellow on!")
+        GPIO.output(1,True)
+    elif "yellow_off" in msg.payload:
+        GPIO.output(12, False)
+```
