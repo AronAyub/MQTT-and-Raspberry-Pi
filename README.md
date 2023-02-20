@@ -41,16 +41,29 @@ sudo apt-get install mosquitto -y
 ```
 sudo apt-get install mosquitto mosquitto-clients -y
 ```
-- Once client is installed we test the topic of our choice "Aron_Testing_Topic" use the code below:
+ Once client is installed we test the topic of our choice "Aron_Testing_Topic" use the code below:
 ```
 mosquitto_sub -t Aron_Testing_Topic
 ```
 Theoritically, we are subscribing to the defined topic, Aron_Testing_Topic, **-t** and everytime we publish the Aron_Testing_Topic, the message will appear iin the window. 
 
-- The terminal constantly listens to the message, we need to open two terminals. I am using PUTTY to open two terminals.
+The terminal constantly listens to the message, we need to open two terminals. I am using PUTTY to open two terminals.
 ```
 mosquitto_pub -t "test_topic" -m "Hello, Hell is ?"
 ```
-- just like before, **-t** denoting topic, **-m** denotes publish. Our message should appear at the subscriber window as below:
+Just like before, **-t** denoting topic, **-m** denotes publish. Our message should appear at the subscriber window as below:
 
-## Automation using MQTT, Raspberry Pi and 
+## Automation using MQTT & Raspberry Pi
+
+- Ever thought about automating your room ?Controlling your lights, Gate, fridges, gate, remotely ? It can be very interesting since it promotes efficiency, productivity, and accuracy while reducing coss, erros and waste.
+
+Will explain how to do a simple automation, controlling your devices over the **Mobile App** your **PC** and remotely.
+
+### Raspberry Pi Set up:
+To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) in your terminal type:
+```
+sudo pip install paho-mqtt
+```
+
+
+
