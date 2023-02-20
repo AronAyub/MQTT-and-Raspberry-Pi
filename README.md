@@ -64,12 +64,14 @@ Will explain how to do a simple automation, controlling your devices over the **
 #### Prototype Circuit Diagram
 <img width="844" alt="Automation_bb" src="https://user-images.githubusercontent.com/55284959/220157650-e11fa9c6-d923-483d-a610-395bddfa9330.png">
 
+## Raspberry Pi Coding
+
 To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) by typing the comand below in the terminal:
 ```
 sudo pip install paho-mqtt
 ```
 We are using Mosquitto as our broker and Raspberry pi as our Client device. *Pato-MQTT* library will be instrumental.
-#### Code Explained:
+### Code Explained:
 
 Create a .py file in your raspberry pi and let start coding 
 ##### Import dependent libraries, paho.mqtt client and GPIOs
@@ -85,6 +87,8 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 GPIO.setup(12, GPIO.OUT)
 GPIO.setup(13, GPIO.OUT)
+GPIO.setup(15, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
 ```
 Under [Pato-MQTT-lIBRARY](https://pypi.org/project/paho-mqtt/#usage-and-api) there is a sample code for subribing the client to the broker. We shall manipulate it and use it for the course.
 
@@ -112,6 +116,15 @@ def on_message(client, userdata, msg):
         #print("  Yellow on!")
         GPIO.output(1,True)
     elif "yellow_off" in msg.payload:
+        GPIO.output(12, False)
+     if "blue_on" in msg.payload:
+        GPIO.output(11, True)
+    elif "blue_off" in msg.payload:
+          GPIO.output(11, False)
+    if "aron_on" in msg.payload:
+        #print("  Yellow on!")
+        GPIO.output(1,True)
+    elif "aron_off" in msg.payload:
         GPIO.output(12, False)
 ```
 ###### Function call
