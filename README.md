@@ -1,6 +1,6 @@
 # Creating Solutions Using MQTT and Raspberry Pi
 
-MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol designed for use in constrained environments such as low-power, low-bandwidth devices and networks. It is a publish-subscribe messaging protocol that allows devices and applications to communicate with each other over a network.
+MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol which is a publish-subscribe messaging that allows devices and applications to communicate with each other over a network.
 
 In MQTT, messages are published to a "broker" which then distributes them to "subscribers" who have expressed interest in receiving messages on a particular topic. Topics are hierarchical and can be used to organize messages into a logical structure.
 
