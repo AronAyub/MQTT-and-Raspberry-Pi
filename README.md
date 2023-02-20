@@ -25,3 +25,4 @@ Overall, MQTT is a simple, efficient, and flexible messaging protocol that is wi
 
 **Retained messages:** Retained messages are messages that are saved on the broker and delivered to new subscribers when they connect. This ensures that subscribers receive the most recent information on a topic, even if they weren't subscribed when the message was published.
 
+## Setting up a Broker, Client, topics and Subscribing.
