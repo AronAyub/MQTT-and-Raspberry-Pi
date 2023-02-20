@@ -94,10 +94,12 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("x/y/z") #"x/y/z" replace this with your topic name of your choice in the given order.
 ```
 ##### The callback for when a PUBLISH message is received from the server
+The topics must be named in the *PC/mobile app* as named in the code.
+I have defined upto 5 GPIOs, and you can define more pins depending on your needs.
+
 ```
 #You can define as many GPIO as you wish to control your switches.
 def on_message(client, userdata, msg):
-    BarrierBlocked = False
     print(msg.topic+" "+str(msg.payload))
     if "green_on" in msg.payload:
         GPIO.output(11, True)
@@ -108,4 +110,15 @@ def on_message(client, userdata, msg):
         GPIO.output(1,True)
     elif "yellow_off" in msg.payload:
         GPIO.output(12, False)
+```
+###### Function call
+```
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
+
+client.connect("test.mosquitto.org", 1883, 60)
+
+client.loop_forever() # handles reconnecting.
+
 ```
