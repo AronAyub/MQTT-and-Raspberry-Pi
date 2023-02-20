@@ -36,3 +36,21 @@ Overall, MQTT is a simple, efficient, and flexible messaging protocol that is wi
 ```
 sudo apt-get install mosquitto -y
 ```
+- To test if our Broker is working correctly, we create a test client from pi to listen to a topic.
+
+```
+sudo apt-get install mosquitto mosquitto-clients -y
+```
+- Once client is installed we test the topic of our choice "Aron_Testing_Topic" use the code below:
+```
+mosquitto_sub -t Aron_Testing_Topic
+```
+Theoritically, we are subscribing to the defined topic, Aron_Testing_Topic, **-t** and everytime we publish the Aron_Testing_Topic, the message will appear iin the window. 
+
+- The terminal constantly listens to the message, we need to open two terminals. I am using PUTTY to open two terminals.
+```
+mosquitto_pub -t "test_topic" -m "Hello, Hell is ?"
+```
+- just like before, **-t** denoting topic, **-m** denotes publish. Our message should appear at the subscriber window as below:
+
+## Automation using MQTT, Raspberry Pi and 
