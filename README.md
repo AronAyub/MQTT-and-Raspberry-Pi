@@ -65,5 +65,23 @@ To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) in your
 sudo pip install paho-mqtt
 ```
 
+We are using Mosquitto as our broker and Raspberry pi as our Client device. *Pato-MQTT* will be instrumental in the python script running on Raspberry Pi.
 
+#### Code Explained:
+##### Import dependent libraries, paho.mqtt client and GPIOs
+
+```
+import paho.mqtt.client as mqtt
+import RPi.GPIO as GPIO
+```
+##### Define GPIO and set up their modes
+```
+GPIO.setwarnings(False)
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
+GPIO.setup(13, GPIO.OUT)
+```
+Under [Pato-MQTT-lIBRARY](https://pypi.org/project/paho-mqtt/#usage-and-api) there is a sample code for subribing the client to the broker. We shall manipulate it and use it for the course.
 
