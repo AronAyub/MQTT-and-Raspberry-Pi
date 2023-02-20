@@ -57,18 +57,18 @@ Just like before, **-t** denoting topic, **-m** denotes publish. Our message sho
 
 ## Automation using MQTT & Raspberry Pi
 
-Ever thought about automating your room ?Controlling your lights, Gate, fridges, and any other house appliaces remotely ? It can be very interesting since it promotes efficiency, productivity, and accuracy while reducing cost, erros and waste.
+Ever thought about automating your room remotely ? Controlling your lights, Gate, fridges, and any other house appliaces remotely ? It can be very interesting since it promotes efficiency, productivity, and accuracy while reducing cost, erros and waste.
 
 Will explain how to do a simple automation, controlling your devices over the **Mobile App** your **PC**, all this is done remotely.
-
 ### Raspberry Pi Set up:
+#### Prototype Circuit Diagram
+<img width="844" alt="Automation_bb" src="https://user-images.githubusercontent.com/55284959/220157650-e11fa9c6-d923-483d-a610-395bddfa9330.png">
+
 To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) by typing the comand below in the terminal:
 ```
 sudo pip install paho-mqtt
 ```
-
 We are using Mosquitto as our broker and Raspberry pi as our Client device. *Pato-MQTT* library will be instrumental.
-
 #### Code Explained:
 
 Create a .py file in your raspberry pi and let start coding 
