@@ -64,6 +64,8 @@ Will explain how to do a simple automation, controlling your devices over the **
 #### Prototype Circuit Diagram
 <img width="844" alt="Automation_bb" src="https://user-images.githubusercontent.com/55284959/220157650-e11fa9c6-d923-483d-a610-395bddfa9330.png">
 
+To control an AC device/ appliance, replace LED with a 5V relay module. 
+
 ## Raspberry Pi Coding
 
 To get started, install [Paho-MQTT](https://pypi.org/project/paho-mqtt/) by typing the comand below in the terminal:
@@ -138,6 +140,8 @@ client.connect("test.mosquitto.org", 1883, 60)
 client.loop_forever() # handles reconnecting.
 
 ```
+# USe Adroid App to control your appliances 
+
 #### Full Code
 ```
 c AronAyub feb 2023
