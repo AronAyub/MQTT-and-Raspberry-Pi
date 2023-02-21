@@ -140,7 +140,7 @@ client.connect("test.mosquitto.org", 1883, 60)
 client.loop_forever() # handles reconnecting.
 
 ```
-# USe Adroid App to control your appliances 
+## USe Adroid App to control your appliances 
 
 #### Full Code
 
