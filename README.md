@@ -1,4 +1,7 @@
 # Creating Solutions Using MQTT and Raspberry Pi
+
+![,airquality drawio (5)](https://user-images.githubusercontent.com/55284959/220721311-cf2da874-4d7f-4dfc-ae88-2ac902fe9e56.png)
+
 *Most engineers may have a preference for practical, hands-on work rather than abstract theories or narratives :grinning: a little of Theory will get us started today :rofl:* 
 
 MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol which is a publish-subscribe messaging that allows devices and applications to communicate with each other over a network.
