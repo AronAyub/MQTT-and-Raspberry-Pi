@@ -141,6 +141,8 @@ client.loop_forever() # handles reconnecting.
 
 ```
 ## Use Adroid App to control your appliances 
+Navigate to play store and install the app.
+<img width="751" alt="app" src="https://user-images.githubusercontent.com/55284959/220531457-87b49e95-ff07-4744-bebf-67722a3778f2.png">
 
 
 
