@@ -1,5 +1,4 @@
 #Importing Dependables 
-
 import paho.mqtt.client as mqtt
 import RPi.GPIO as GPIO
 
@@ -17,8 +16,8 @@ def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe("x/y/z") #"x/y/z" replace this with your topic name of your choice in the given order.
-    
+    client.subscribe("aron/ayub/topic1") #"x/y/z" replace this with your topic name of your choice in the given order.
+    self.subscribe("led",0)
 #You can define as many GPIO as you wish to control your switches.
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
@@ -45,6 +44,6 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("test.mosquitto.org", 1883, 60)
+client.connect("test.mosquitto.org", 1883, 60) #mqtt broker any of choice
 
 client.loop_forever() # handles reconnecting.
